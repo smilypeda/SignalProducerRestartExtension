@@ -14,8 +14,6 @@ import Foundation
 
 class RestartExtensionSpec: QuickSpec {
     
-    private let testError = NSError(domain: "AnyDomain", code: 0, userInfo: nil)
-    
     override func spec() {
         
         describe("test for restart command from custom extension") {
@@ -76,6 +74,7 @@ class RestartExtensionSpec: QuickSpec {
                 var observer: Signal<String, NSError>.Observer!
                 var completed = false
                 var next = false
+                let testError = NSError(domain: "AnyDomain", code: 0, userInfo: nil)
                 
                 beforeEach {
                     completed = false
@@ -101,7 +100,7 @@ class RestartExtensionSpec: QuickSpec {
                     expect(next) == true
                     expect(completed) == false
                     
-                    observer.sendFailed(self.testError)
+                    observer.sendFailed(testError)
                     expect(completed) == true
                 }
                 
