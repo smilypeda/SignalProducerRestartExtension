@@ -24,10 +24,10 @@ class RestartExtensionSpec: QuickSpec {
                 
                 var firstCompleted = false
                 var restarted = false
-                let scheduler = QueueScheduler()
+                let scheduler = TestScheduler()
                 let timeout = 0.5
                 
-                let producer = SignalProducer<String, NSError> { observer, outerDisposable in
+                let producer = SignalProducer<String, NSError> { observer, _ in
                     observer.sendNext("1")
                     observer.sendCompleted()
                 }
@@ -45,26 +45,23 @@ class RestartExtensionSpec: QuickSpec {
                     .start()
                 
                 expect(restarted) == false
-                expect(restarted).toEventually(equal(true), timeout: timeout*2)
-            }
-            
-            var observer: Signal<String, NSError>.Observer!
-            var producer: SignalProducer<String, NSError>!
-            
-            beforeEach {
-                producer = SignalProducer<String, NSError>() { incomingObserver, disposable in
-                    observer = incomingObserver
-                }
+                
+                scheduler.advanceByInterval(timeout*2)
+                
+                expect(restarted) == true
             }
             
             it("all next events are received") {
                 
                 var counter: Int = 0
+                var observer: Signal<String, NSError>.Observer!
                 
-                producer
-                    .restart(withDelay: 0, on: QueueScheduler())
+                SignalProducer<String, NSError>() { incomingObserver, _ in
+                    observer = incomingObserver
+                    }
+                    .restart(withDelay: 0, on: TestScheduler())
                     .on(next: { e in
-                            counter += 1
+                        counter += 1
                     }).start()
                 
                 observer.sendNext("1")
@@ -74,44 +71,48 @@ class RestartExtensionSpec: QuickSpec {
                 expect(counter) == 3
             }
             
-            // common behavior test
-            
-            var completed = false
-            var next = false
-            
-            beforeEach {
+            context("common logic behavior test") {
                 
-                completed = false
-                next = false
+                var observer: Signal<String, NSError>.Observer!
+                var completed = false
+                var next = false
                 
-                producer
-                    .restart(withDelay: 0, on: QueueScheduler())
-                    .on(completed: {
-                        completed = true
-                        
-                        },
-                        next: { e in
-                            next = true
-                    }).start()
-            }
-        
-            it("completed event should be received on error") {
-                observer.sendNext("1")
+                beforeEach {
+                    completed = false
+                    next = false
+                    
+                    let producer = SignalProducer<String, NSError>() { incomingObserver, _ in
+                        observer = incomingObserver
+                    }
+                    producer
+                        .restart(withDelay: 0, on: TestScheduler())
+                        .on(completed: {
+                            completed = true
+                            
+                            },
+                            next: { e in
+                                next = true
+                        }).start()
+                }
                 
-                expect(next) == true
-                expect(completed) == false
+                it("completed event should be received on error") {
+                    observer.sendNext("1")
+                    
+                    expect(next) == true
+                    expect(completed) == false
+                    
+                    observer.sendFailed(self.testError)
+                    expect(completed) == true
+                }
                 
-                observer.sendFailed(self.testError)
-                expect(completed) == true
-            }
-            
-            it("no completed event if no error") {
-                
-                observer.sendNext("1")
-                observer.sendCompleted()
-                
-                expect(next) == true
-                expect(completed) == false
+                it("no completed event if no error") {
+                    
+                    observer.sendNext("1")
+                    observer.sendCompleted()
+                    
+                    expect(next) == true
+                    expect(completed) == false
+                }
             }
             
         }
