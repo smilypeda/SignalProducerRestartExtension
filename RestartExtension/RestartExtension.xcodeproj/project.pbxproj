@@ -18,6 +18,7 @@
 		C2E1227B1D63E655002C30E0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25084811D63AF6F004E4298 /* Quick.framework */; };
 		C2E1227C1D63E655002C30E0 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2085E501D6237DA00ACA0F4 /* ReactiveCocoa.framework */; };
 		C2E1227D1D63E655002C30E0 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2085E511D6237DA00ACA0F4 /* Result.framework */; };
+		C2E1227F1D63E6AD002C30E0 /* RestartExtensionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E1227E1D63E6AD002C30E0 /* RestartExtensionSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C25084821D63AF6F004E4298 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		C2E1226E1D63E5CB002C30E0 /* RestartExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestartExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E122721D63E5CB002C30E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2E1227E1D63E6AD002C30E0 /* RestartExtensionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestartExtensionSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		C2E1226F1D63E5CB002C30E0 /* RestartExtensionTests */ = {
 			isa = PBXGroup;
 			children = (
+				C2E1227E1D63E6AD002C30E0 /* RestartExtensionSpec.swift */,
 				C2E122721D63E5CB002C30E0 /* Info.plist */,
 			);
 			path = RestartExtensionTests;
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E1227F1D63E6AD002C30E0 /* RestartExtensionSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +427,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -432,6 +437,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Peda.RestartExtensionTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RestartExtension.app/RestartExtension";
 			};
 			name = Debug;
@@ -441,6 +447,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
