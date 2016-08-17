@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C250848A1D63B07F004E4298"
+               BuildableName = "RestartExtensionSpec.xctest"
+               BlueprintName = "RestartExtensionSpec"
+               ReferencedContainer = "container:RestartExtension.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C2E1226D1D63E5CB002C30E0"
+               BuildableName = "RestartExtensionTests.xctest"
+               BlueprintName = "RestartExtensionTests"
+               ReferencedContainer = "container:RestartExtension.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

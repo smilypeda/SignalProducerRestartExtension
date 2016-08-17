@@ -14,7 +14,21 @@
 		C2481D941D622BA700772E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2481D921D622BA700772E9E /* Main.storyboard */; };
 		C2481D961D622BA700772E9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2481D951D622BA700772E9E /* Assets.xcassets */; };
 		C2481D991D622BA700772E9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2481D971D622BA700772E9E /* LaunchScreen.storyboard */; };
+		C2E1227A1D63E654002C30E0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25084821D63AF6F004E4298 /* Nimble.framework */; };
+		C2E1227B1D63E655002C30E0 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25084811D63AF6F004E4298 /* Quick.framework */; };
+		C2E1227C1D63E655002C30E0 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2085E501D6237DA00ACA0F4 /* ReactiveCocoa.framework */; };
+		C2E1227D1D63E655002C30E0 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2085E511D6237DA00ACA0F4 /* Result.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2E122731D63E5CB002C30E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2481D831D622BA700772E9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2481D8A1D622BA700772E9E;
+			remoteInfo = RestartExtension;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C2085E501D6237DA00ACA0F4 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
@@ -26,6 +40,10 @@
 		C2481D951D622BA700772E9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2481D981D622BA700772E9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2481D9A1D622BA700772E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C25084811D63AF6F004E4298 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		C25084821D63AF6F004E4298 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		C2E1226E1D63E5CB002C30E0 /* RestartExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestartExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E122721D63E5CB002C30E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +56,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2E1226B1D63E5CB002C30E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2E1227A1D63E654002C30E0 /* Nimble.framework in Frameworks */,
+				C2E1227B1D63E655002C30E0 /* Quick.framework in Frameworks */,
+				C2E1227C1D63E655002C30E0 /* ReactiveCocoa.framework in Frameworks */,
+				C2E1227D1D63E655002C30E0 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -45,8 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				C2481D8D1D622BA700772E9E /* RestartExtension */,
-				C2085E501D6237DA00ACA0F4 /* ReactiveCocoa.framework */,
-				C2085E511D6237DA00ACA0F4 /* Result.framework */,
+				C25084951D63B0A0004E4298 /* Libs */,
+				C2E1226F1D63E5CB002C30E0 /* RestartExtensionTests */,
 				C2481D8C1D622BA700772E9E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				C2481D8B1D622BA700772E9E /* RestartExtension.app */,
+				C2E1226E1D63E5CB002C30E0 /* RestartExtensionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +100,25 @@
 				C2481D9A1D622BA700772E9E /* Info.plist */,
 			);
 			path = RestartExtension;
+			sourceTree = "<group>";
+		};
+		C25084951D63B0A0004E4298 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				C25084811D63AF6F004E4298 /* Quick.framework */,
+				C25084821D63AF6F004E4298 /* Nimble.framework */,
+				C2085E501D6237DA00ACA0F4 /* ReactiveCocoa.framework */,
+				C2085E511D6237DA00ACA0F4 /* Result.framework */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		C2E1226F1D63E5CB002C30E0 /* RestartExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2E122721D63E5CB002C30E0 /* Info.plist */,
+			);
+			path = RestartExtensionTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,18 +142,41 @@
 			productReference = C2481D8B1D622BA700772E9E /* RestartExtension.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C2E1226D1D63E5CB002C30E0 /* RestartExtensionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2E122751D63E5CB002C30E0 /* Build configuration list for PBXNativeTarget "RestartExtensionTests" */;
+			buildPhases = (
+				C2E1226A1D63E5CB002C30E0 /* Sources */,
+				C2E1226B1D63E5CB002C30E0 /* Frameworks */,
+				C2E1226C1D63E5CB002C30E0 /* Resources */,
+				C2E122791D63E611002C30E0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2E122741D63E5CB002C30E0 /* PBXTargetDependency */,
+			);
+			name = RestartExtensionTests;
+			productName = RestartExtensionTests;
+			productReference = C2E1226E1D63E5CB002C30E0 /* RestartExtensionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C2481D831D622BA700772E9E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Alex Peda";
 				TargetAttributes = {
 					C2481D8A1D622BA700772E9E = {
 						CreatedOnToolsVersion = 7.2;
+					};
+					C2E1226D1D63E5CB002C30E0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = C2481D8A1D622BA700772E9E;
 					};
 				};
 			};
@@ -122,6 +194,7 @@
 			projectRoot = "";
 			targets = (
 				C2481D8A1D622BA700772E9E /* RestartExtension */,
+				C2E1226D1D63E5CB002C30E0 /* RestartExtensionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +210,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2E1226C1D63E5CB002C30E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -148,6 +228,25 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		C2E122791D63E611002C30E0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 			);
 			outputPaths = (
 			);
@@ -167,7 +266,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2E1226A1D63E5CB002C30E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2E122741D63E5CB002C30E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2481D8A1D622BA700772E9E /* RestartExtension */;
+			targetProxy = C2E122731D63E5CB002C30E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C2481D921D622BA700772E9E /* Main.storyboard */ = {
@@ -279,6 +393,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				INFOPLIST_FILE = RestartExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -294,11 +409,48 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				INFOPLIST_FILE = RestartExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Peda.RestartExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C2E122761D63E5CB002C30E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = RestartExtensionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Peda.RestartExtensionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RestartExtension.app/RestartExtension";
+			};
+			name = Debug;
+		};
+		C2E122771D63E5CB002C30E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = RestartExtensionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alex-Peda.RestartExtensionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RestartExtension.app/RestartExtension";
 			};
 			name = Release;
 		};
@@ -322,6 +474,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C2E122751D63E5CB002C30E0 /* Build configuration list for PBXNativeTarget "RestartExtensionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2E122761D63E5CB002C30E0 /* Debug */,
+				C2E122771D63E5CB002C30E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

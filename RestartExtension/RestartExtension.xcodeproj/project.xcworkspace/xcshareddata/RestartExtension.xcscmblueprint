@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "77FCF9357A96B95E4CF0DE9EC1697A452429C823",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D0991E3F4F453D60832E136DD9AA7180746DE3D7" : 0,
+    "77FCF9357A96B95E4CF0DE9EC1697A452429C823" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "36B2EC6C-2915-4DC5-8345-1F3E53044ED4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D0991E3F4F453D60832E136DD9AA7180746DE3D7" : "",
+    "77FCF9357A96B95E4CF0DE9EC1697A452429C823" : "SignalProducerRestartExtension\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RestartExtension",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RestartExtension\/RestartExtension.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/smilypeda\/SignalProducerRestartExtension.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "77FCF9357A96B95E4CF0DE9EC1697A452429C823"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/alexpeda\/findgoods.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D0991E3F4F453D60832E136DD9AA7180746DE3D7"
+    }
+  ]
+}
